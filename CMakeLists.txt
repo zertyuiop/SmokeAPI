@@ -60,12 +60,12 @@ set(SMOKE_API_SOURCES
 
 if(WIN32)
     set_32_and_64(STEAM_API_MODULE steam_api)
-    set_32_and_64(STEAMCLIENT_DLL steamclient)
+    set_32_and_64(STEAMCLIENT_DLL lsteamclient)
 
     list(APPEND SMOKE_API_SOURCES src/main_win.cpp)
 else()
     set(STEAM_API_MODULE libsteam_api)
-    set(STEAMCLIENT_DLL steamclient)
+    set(STEAMCLIENT_DLL lsteamclient)
 
     list(APPEND SMOKE_API_SOURCES src/main_linux.cpp)
 endif()
